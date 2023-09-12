@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>CENTRAL DE CANCELAMENTOS RABLAIVE</title>
+
+</head>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<header>
+  <div class='container'>
+    <h1>CENTRAL DE CANCELAMENTOS</h1>
+  </div>
+</header>
+
+<style type="text/css">
+
+
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+ul,li{
+  list-style: none;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #282933;
+  color: white;
+  overflow: hidden;
+}
+
+header{
+  background-color: #171A23;
+  height: 20vh;
+  
+  display: flex;
+}
+
+.container{
+  margin: auto;
+}
+
+main{
+  height: 80vh;
+  width: 100%;
+}
+.maincontainer > h2{
+    margin-top: 50px;
+}
+
+.maincontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input, button{
+  outline: none;
+}
+
+input{
+  width: 400px;
+  height: 50px;
+  padding: 0 5px;
+  font-size: 18px;
+  background-color: #2A2B34;
+  color: white;
+  border: 3px solid #32333C;
+  border-radius: 3px;
+}
+
+#bntAplicar{
+  font-size: 18px;
+  width: 400px;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  font-weigth: 900;
+  color: white;
+  background-color: #8F05EC;
+  cursor: pointer;
+  transition: all .2s;
+}
+#bntAplicar:hover{
+  background-color: #8504DB;  
+}
+</style>
+
+<main>
+  <div class='container maincontainer'>
+    <h2 id='TextCancell'>Pelo o que essa pessoa será cancelada?</h2>
+    <img src="https://habblive.in/imager.php?user=vini259.&action=wav&size=l&head_direction=2&direction=2&gesture=std" id='imgPlayer'>
+    <input type="text" placeholder="Digite um nick" id="inputNick">
+    <button id='bntAplicar'>Aplicar</button>
+  </div>
+</main>
+
+<script>
+    const nickname = document.querySelector("#inputNick")
+const TextoCancelamento = document.querySelector("#TextCancell")
+const btn = document.querySelector("#bntAplicar")
+const img = document.querySelector("#imgPlayer")
+
+nickname.addEventListener('input', ()=>{
+  img.src=`https://habblive.in/imager.php?user=${nickname.value}&action=wav&size=l&head_direction=2&direction=2&gesture=std`
+})
+
+bntAplicar.addEventListener('click', ()=>{
+  let cancelamento = parseInt(Math.random() * 10 + 1)
+    if(cancelamento == 1){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por falar merda demais!`
+  }
+    if(cancelamento == 2){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por se engasgar com *****!`
+  }
+    if(cancelamento == 3){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por traficar raros!`
+  }
+    if(cancelamento == 4){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por gastar no picnic!`
+  }
+    if(cancelamento == 5){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por perder todos eventos de MOD!`
+  }
+    if(cancelamento == 6){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por vender raro por PIX!`
+  }
+    if(cancelamento == 7){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por dar o **!`
+  }
+    if(cancelamento == 8){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por vender o banco de dados do hotel!`
+  }
+    if(cancelamento == 9){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por traficar gatos!`
+  }
+    if(cancelamento == 10){
+    TextoCancelamento.textContent = `${nickname.value} Foi cancelado(a) por perder todos jogos da promotoria!`
+  }
+  
+  
+})
+</script>
+
+</body>
+</html>
